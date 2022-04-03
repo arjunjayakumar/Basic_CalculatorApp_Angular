@@ -1,0 +1,18 @@
+<div>
+    <div class="div1">
+        <h1 class="heading">Calculator</h1>
+        <div class="base">
+            <div class="maindisplay">{{maindisplay}} </div>
+            <div class="keypad" style="width: 100%;">
+                <button *ngFor="let p of ['1','2','3']" (click)='keyset(p)' class="keys numkey">{{p}}</button><br>
+                <button *ngFor="let p of ['4','5','6']" (click)='keyset(p)' class="keys numkey">{{p}}</button><br>
+                <button *ngFor="let p of ['7','8','9']" (click)='keyset(p)' class="keys numkey">{{p}}</button><br>
+                <button *ngFor="let p of ['0']" (click)='keyset(p)' class="keys numkey">{{p}}</button>
+                <button *ngFor="let op of ['+','-']" (click)='keyset(op)' class="keys opkey">{{op}}</button><br>
+                <button *ngFor="let op of ['*','/']" (click)='keyset(op)' class="keys opkey">{{op}}</button>
+                <button (click)="calculate()" class="keys equalkey">=</button><br>
+                <button (click)="clear()" class="keys ackey">AC</button><br>
+            </div>
+        </div>
+    </div>
+</div>
